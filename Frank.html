@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,10 +100,10 @@
 <body>
     <div class="card">
         <h1>⛳ Frank 🏌️</h1>
-        <p>Hvad er kodeordet?</p>
+        <p>What is the password?</p>
 
-        <input id="answer" type="text" placeholder="Skriv dit svar her">
-        <button onclick="checkAnswer()">Tjek</button>
+        <input id="answer" type="text" placeholder="Type your answer here">
+        <button onclick="checkAnswer()">Check</button>
 
         <div id="result"></div>
     </div>
@@ -114,15 +114,14 @@
             const result = document.getElementById("result");
 
             if (input === "Ørsted" || input === "ørsted") {
-                // Valgfrit: kort feedback før redirect
-                result.textContent = "✓ Korrekt – videresender…";
+                result.textContent = "✓ Correct – redirecting…";
                 result.style.color = "#2ecc71";
 
                 setTimeout(() => {
                     window.location.href = "https://whelan.github.io/treasurehunt/Side2.html";
                 }, 800);
             } else {
-                result.textContent = "Prøv igen";
+                result.textContent = "Try again";
                 result.style.color = "#e74c3c";
             }
         }
